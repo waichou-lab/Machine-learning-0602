@@ -99,3 +99,4 @@ A single criss-cross pass only allows each pixel to aggregate information from i
 This is analogous to two-hop message passing in a graph, achieving global context with only local computations.
 
 ### 2.4 Architecture Diagram
+
