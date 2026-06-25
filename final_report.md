@@ -100,4 +100,43 @@ This is analogous to two-hop message passing in a graph, achieving global contex
 
 ### 2.4 Architecture Diagram
 
-![Architecture Diagram](Machine-learning-0602/Procedure.png)
+![Architecture Diagram](../Machine-learning-0602/Procedure.png)
+
+
+---
+
+## 3. Comparative Analysis
+
+### 3.1 CCNet vs. Non-local Networks
+
+| Aspect | Non-local | CCNet |
+|--------|-----------|-------|
+| **Attention Computation** | Full pairwise | Horizontal + vertical only |
+| **Time Complexity** | $O(N^2)$ | $O(N)$ |
+| **Memory Complexity** | $O(N^2)$ | $O(N)$ |
+| **Number of Attention Heads** | Typically 1-2 | 1 |
+| **Recursive Application** | No | Two passes recommended |
+| **Global Context Coverage** | One pass | Two passes needed |
+| **Suitability for High Resolution** | Poor (memory explosion) | Good (linear scaling) |
+
+**Key Observation**: CCNet trades single-pass global coverage for significant efficiency gains, achieving equivalent global context through two cheaper passes.
+
+### 3.2 CCNet vs. SENet
+
+| Aspect | SENet | CCNet |
+|--------|-------|-------|
+| **Attention Type** | Channel | Spatial |
+| **Dimension Focus** | Channel relationships | Spatial relationships |
+| **Computational Cost** | Very low ($O(C^2)$) | Low ($O(N)$) |
+| **Global Context Type** | Channel-wise statistics | Position-wise affinities |
+| **Complementarity** | — | Can be used together (SE + CCNet) |
+
+**Key Observation**: SENet and CCNet address different aspects of feature refinement. SENet recalibrates channel importance, while CCNet models spatial dependencies. They are complementary and can be combined for stronger results.
+
+---
+
+## 4. UML Architecture Design and Implementation
+
+### 4.1 UML Class Diagram
+
+!
