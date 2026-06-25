@@ -196,6 +196,7 @@ class SegmentationNet(nn.Module):
         return x
 ```
 ###4.3 Component Dependencies
+```text
 SegmentationNet
     ├── CNNBackbone
     │   └── layers: Sequential (Conv2d, BatchNorm, ReLU, MaxPool)
@@ -204,3 +205,4 @@ SegmentationNet
     └── SegmentationHead
         ├── Conv2d (256 → num_classes)
         └── Upsample (scale_factor=8, mode='bilinear')
+```
