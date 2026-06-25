@@ -180,6 +180,7 @@ class CrissCrossAttention(nn.Module):
 ```
 
 ### 4.2 Integration Example
+```
 class SegmentationNet(nn.Module):
     def __init__(self, attention_type='ccnet'):
         super().__init__()
@@ -193,6 +194,7 @@ class SegmentationNet(nn.Module):
             x = self.attention(x)
         x = self.head(x)
         return x
+```
 ###4.3 Component Dependencies
 SegmentationNet
     ├── CNNBackbone
