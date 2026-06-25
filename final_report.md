@@ -100,4 +100,4 @@ This is analogous to two-hop message passing in a graph, achieving global contex
 
 ### 2.4 Architecture Diagram
 
-![Architecture Diagram](Procedure.png)
+![Architecture Diagram](Machine-learning-0602/Procedure.png)
