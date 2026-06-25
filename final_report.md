@@ -139,4 +139,4 @@ This is analogous to two-hop message passing in a graph, achieving global contex
 
 ### 4.1 UML Class Diagram
 
-!
+![UML Class Diagram]()
