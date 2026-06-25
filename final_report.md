@@ -196,7 +196,7 @@ class SegmentationNet(nn.Module):
         return x
 ```
 
-###4.3 Component Dependencies
+### 4.3 Component Dependencies
 ```text
 SegmentationNet
     ├── CNNBackbone
