@@ -85,9 +85,7 @@ Y^V_{h,w} = \sum_{h'=1}^{H} \text{Softmax}_h \left( \theta(X_{h,w})^T \phi(X_{h'
 $$
 
 **Combined output:**
-$$
-Y = Y^H + Y^V
-$$
+$Y = Y^H + Y^V$
 
 **Computational cost**: $O(HW) = O(N)$
 
