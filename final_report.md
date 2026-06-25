@@ -176,7 +176,7 @@ class CrissCrossAttention(nn.Module):
         # Combine + output projection + residual
         out = out_h + out_v
         out = self.out_conv(out)
-        return x + out
+        return x + out```
 
 ### 4.2 Integration Example
 class SegmentationNet(nn.Module):
