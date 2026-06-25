@@ -195,6 +195,7 @@ class SegmentationNet(nn.Module):
         x = self.head(x)
         return x
 ```
+
 ###4.3 Component Dependencies
 ```text
 SegmentationNet
